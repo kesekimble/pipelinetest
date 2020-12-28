@@ -5,7 +5,7 @@ node{
                 }
         stage('Compile Package'){
                 def mvmhome = tool name: 'maven-3', type: 'maven'
-                sh "$(mvmhome)/bin/mvm package"
+                sh "${mvmhome}/bin/mvm package"
                 
         }
 }
