@@ -2,7 +2,7 @@ properties([parameters([choice(choices: ['master', 'future1', 'future2'], descri
 node{
         stage('SCM Checkout'){
                 
-                git 'https://github.com/javahometech/my-app', branch: "${params.branch}"
+                git url: 'https://github.com/javahometech/my-app', branch: "${params.branch}"
                 }
         stage('Compile Package'){
                 def mvmhome = tool name: 'maven-3', type: 'maven'
