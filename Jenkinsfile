@@ -8,4 +8,7 @@ node{
                 sh "${mvmhome}/bin/mvn package"
                 
         }
+        stage('Deploy to Apache'){
+                sh 'cp /apps/opt/jenkins_home/workspace/pipeline2-maven-git/target/myweb-0.0.12.war /apps/opt/apache/apache-tomcat-9.0.0.M10/webapps'
+        }
 }
